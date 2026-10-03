@@ -1,5 +1,5 @@
 variable "CLOUDFLARED_VERSION" {
-    default = "2026.8.2"
+    default = "2026.9.3"
 }
 
 variable "LATEST" {
@@ -11,11 +11,11 @@ variable "MULTI_PLATFORM" {
 }
 
 variable "GOVERSION" {
-    default = "1.26.6"
+    default = "1.27.1"
 }
 
 variable "ALPINEVERSION" {
-    default = "3.24"
+    default = "3.24.2"
 }
 
 target "default" {
@@ -35,9 +35,9 @@ target "default" {
         "linux/riscv64"
     ]
     tags = [
-        "erisamoe/cloudflared:${CLOUDFLARED_VERSION}",
-        "ghcr.io/erisa/cloudflared:${CLOUDFLARED_VERSION}",
-        LATEST ? "erisamoe/cloudflared:latest" : "",
-        LATEST ? "ghcr.io/erisa/cloudflared:latest" : "",
+        "ranggazay/cloudflared:${CLOUDFLARED_VERSION}",
+        "ghcr.io/ranggazay/cloudflared:${CLOUDFLARED_VERSION}",
+        LATEST ? "ranggazay/cloudflared:latest" : "",
+        LATEST ? "ghcr.io/ranggazay/cloudflared:latest" : "",
     ]
 }
